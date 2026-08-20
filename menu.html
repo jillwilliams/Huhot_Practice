@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" Unicode="U+1F334, UTF-8: F0 9F 8C B4" Unicode= "U+1F332, UTF-8: F0 9F 8C B2" Unicode= "U+00A9"  Unicode="U+00A9, UTF-8: C2 A9" Unicode="U+1F440, UTF-8: F0 9F 91 80">
+        <title>Huhot Practice</title>
+        <link HREF="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Shadows+Into+Light|Fresca|Nunito|Iceland" rel="stylesheet">
+        <link rel="stylesheet" HREF="./menu.css">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/9f71dab2a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+        <!-- <meta name="keywords" content="”> -->
+    </head>
+    <body>
+        <div class="nav-container">
+            <nav class="navbar">
+                <img src="images/huhot_logo.png" id="navbar-logo">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>    
+                </div>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="/locations.html" class="nav-links">LOCATIONS</a>
+                    </li>
+                    <li>
+                        <a href="/menu.html" class="nav-links">MENU</a>
+                    </li>
+                    <li>
+                        <a href="/rewards.html" class="nav-links">HUHOT REWARDS</a>
+                    </li>
+                    <li>
+                        <a href="/careers.html" class="nav-links">CAREERS</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-links nav-links-btn">ORDER ONLINE</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- ===========end navbar section========== -->
+
+        <!-- ========== begin menu section========== -->
+
+        <section class="template1">
+            <div class="meal">
+                <img class="meal2" src="images/meal2.png">
+            </div>
+            <div class="meal-gallery">
+                <button class="grill">THE GRILL</button>
+                <button class="app">APPETIZERS<br>& ...</button>
+                <button class="sides">SIDES AND DRINKS</button>
+                <button class="kids">FOR THE KIDS</button>
+            </div>
+            <div class="text">
+                <p>CHOOSE ALL YOUR FAVORITE STIR FRY INGREDIENTS AND LADLE ON A FEW OF OUR <span>SIGNATURE SAUCES</span> , THEN WATCH YOUR MEAL GET GRILLED TO PERFECTION.</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <a target="_blank" href="images/create-your-meal.png">
+                        <img src="images/create-your-meal.png" alt="create meal" width="600" height="400">
+                    </a>
+                    <div class="desc">CREATE YOUR<br>OWN MEAL</div>
+                </div>
+                <div class="gallery-item">
+                    <a target="_blank" href="images/recipes.png">
+                        <img src="images/recipes.png" alt="recipe" width="600" height="400">
+                    </a>
+                    <div class="desc">RECIPES</div>
+                </div>
+                <div class="gallery-item">
+                    <a target="_blank" href="images/local-prices.png">
+                        <img src="images/local-prices.png" alt="local prices" width="600" height="400">
+                    </a>
+                    <div class="desc">LOCAL MENU<br>PRICING</div>
+                </div>
+            </div>
+            <div class="lowcarb">
+                <img src="images/lowcarb.png">
+            </div>
+            <div class="allergy-info">
+                <h1>ALLERGY & NUTRITIONAL INFORMATION</h1>
+            </div>
+        </section>
+
+<!-- ============= begin footer section ========== -->
+        <section class="template5">
+                <div class="footer">
+                    <p class="gift-and-merch">Gift Cards<br>& Merch</p>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/login">
+                        <i class="fa fa-facebook"></i></a>
+                        <a href="https://www.youtube.com">
+                        <i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com">
+                        <i class="fa fa-instagram"></i></a>
+                    </div>
+                    <p class="contact-us">Contact Us</p><br>
+                </div>
+                <div class=mini-bar>
+                    <p>NEWS | ABOUT | ADA INFO | FRANCHISING | EMPLOYMENT</p>
+                </div>
+            </section>
+        </section>
+
+<!-- ===============script============== -->
+    
+    <script src="menu.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 150000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+    </body>
+</html>

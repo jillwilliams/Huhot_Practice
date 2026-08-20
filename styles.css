@@ -1,0 +1,655 @@
+:root {
+    --darkgrey: #222;
+    --brightred: #f94230;
+    --white: #fff;
+    --lightred: #f9433dcc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Iceland', sans-serif;
+}
+
+/* section css */
+.nav-container {
+    width: 100%;
+    background-color: var(--darkgrey);
+}
+
+/* navbar css */
+.navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 160px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* Higher than the image slider */
+    background-color: black;
+}
+
+/* logo */
+#navbar-logo {
+    justify-self: start;
+    margin-left: 40px;
+    width: 100%;
+    height: auto;
+}
+
+/* logo on hover */
+#navbar-logo:hover {
+    cursor: pointer;
+}
+
+/* menu bar (text) GETS MENU ONE LINE*/
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    list-style: none;
+    text-align: center;
+    width: 80%;
+    justify-self: end;
+}
+
+/* link text */
+.nav-links {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+/* on hover */
+.nav-links:hover {
+    color: var(--lightred);
+    transition: 0.5s;
+}
+
+/* order online button */
+.nav-links-btn {
+    background-color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: red;
+}
+
+/* btn on hover */
+.nav-links-btn:hover {
+    background-color: red;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: 1px solid var(--brightred);
+    transition: 0.5s;
+}
+
+/* mobile section / hamburger menu */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 0.5s;
+    background: var(--white);
+}
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .nav-container {
+        position: relative;   
+    }
+    .nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        background: var(--brightred);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 180px;
+        left: -100%;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    #navbar-logo {
+        margin-left: 20px;
+        width: 200%;
+        height: auto;
+        transform: 0.5s;
+    }
+    .nav-menu.active {
+        background: var(--darkgrey);
+        left: 0;
+        opacity: 1;
+        transition: 0.5s;    
+    }
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;    
+    }
+    .nav-links:hover {
+        background-color: var(--brightred);
+        color: var(--white);
+        transition: 0.5s;
+    }
+    .navbar {
+        width: 100%;
+    }
+    .nav-links-btn {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--darkgrey);
+        color: var(--white);
+        transition: 0.5s;
+    }
+    .nav-links-btn:hover {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--brightred);
+        color: var(--white);
+        transition: 0.5s;
+    }
+    #mobile-menu {
+        position: absolute;
+        top: 35%;
+        /* moves it down from top 20% */
+        right: 5%;
+        /* moves it to right 5% */
+        transform: translate(5%, 35%);
+        /* makes it more accurate */
+    }
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-toggle:hover {
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;    
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* --------------end navbar section---------- */
+
+/* ---------------begin slider section---------- */
+
+.image-container {
+    width: 100%;
+    max-width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 140px;
+}
+
+/* set up the swiper images */
+.swiper {
+    width: 100%;
+    height: fit-content;
+}
+
+/* the images */
+.swiper-slide img {
+    width: 100%;
+}
+
+/* change left/right arrows */
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color: var(--brightred);
+}
+
+/* change the img markers */
+.swiper .swiper-pagination-bullet-active {
+    background: var(--brightred);
+}
+
+@media screen and (max-width: 1760px) {
+    .image-container {
+    width: 100%;
+    min-height: auto;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
+
+/* -------------------end slider section---------- */
+
+/* ----------begin section 3 locations green box---------- */
+
+.now-hiring {
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    font-size: 50px;
+    background-color: white;
+    padding: 30px;  
+} 
+
+/* line infront of the word earn */
+.line {
+    color: red;
+}
+
+/* now hiring container */
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+}
+/* ===============green box======================== */
+/* the locations and pricing container */
+.grid-container {
+    display: flex; 
+    grid-template-columns: repeat(5, 1fr); 
+    text-decoration: none;
+    background-color: white; 
+    width: 90%;
+    margin: 5%;
+    height: auto;
+    line-height: 60px; 
+    /* filter: blur(5px);  */
+}
+
+/* the content inside the locations and pricing box */
+.grid-container .column {
+    display: flex;
+    flex-direction: row; 
+    background: rgb(126,138,14);
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    min-height: auto;
+}
+
+/* text location and pricing */
+.grid-container .column .location-pricing {
+    font-size: 50px;
+    color: white;
+    padding-top: 35px;
+    padding-right: 50px;
+    padding-left: 20px; 
+}
+
+/* and pricing text */
+/* text location and pricing */
+.grid-container .column .location-pricing .pricing {
+    font-size: 40px;
+    color: white;
+    padding-top: 140px; 
+}
+
+/* the button: closest HuHot */
+.grid-container .location-button {
+    padding: 6px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 25px;
+    color: black;
+    width: 180px;
+    height: 50px;
+    margin-left: -230px;
+    margin-top: 170px;
+}
+
+/* hover over closest HuHot button */
+.grid-container .location-button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+/* ul formatting */
+.grid-container .column1 {
+    list-style-type: none;
+    background: rgb(126,138,14);
+    padding: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    width: 80%;
+}
+
+/* hover on states */
+.grid-container .column:hover {
+    cursor: pointer;
+}
+
+/* the popup box words "cities" locations*/
+.grid-container .column1 .pop-box-locations {
+    color: black;
+    font-size: 70px;
+}
+
+/* the popup box formatting */
+.grid-container .column1 .pop-box {
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 6px;
+}
+
+
+
+/* the popup box city names text */
+.grid-container .column1 .pop-box h1 {
+    color: rgb(43,114,146);
+    font-size: 45px;
+}
+
+/* the close button */
+.grid-container .column1 .close {
+    color: rgb(43,114,146);
+    font-size: 35px;
+    border: 1px black solid;
+    border-radius: 6px;
+}
+
+
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .grid-container {
+        display: flex; 
+        flex-direction: column;
+        width: 80%;
+        margin: 10%;
+        height: auto;
+        line-height: 40px; 
+    }
+    .grid-container .column .location-pricing {
+        font-size: 40px;
+        margin-left: 100px;
+    }
+    /* text location and pricing */
+    .grid-container .column .location-pricing .pricing {
+        font-size: 25px; 
+    }
+    /* the button: closest HuHot */
+    .grid-container .location-button {
+        padding: 3px 7.5px;
+        font-size: 25px;
+        color: black;
+        width: 180px;
+        height: 50px;
+        margin-left: -210px;
+        margin-top: 130px;
+    }
+    .grid-container .column1 {
+        font-size: 40px;
+        width: 100%;
+        padding-left: 120px;
+    }
+}
+/* ---------------begin section 4 squares-------- */
+
+.template4 {
+    background-color: white;
+}
+
+/* div set up */
+.squares {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+/* blue square */
+.template4 .blue_square {
+    background-image: url(images/blue_square.png);
+    width: 23.5%;
+    height: 45vh;
+    padding-top: 17vh;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+
+.template4 .span1 {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* red square */
+.template4 .red_square {
+    background-image: url(images/red_square.png);
+    width: 23.5%;
+    height: 45vh;
+    padding-top: 18vh;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+/* purple square  */
+.template4 .purple_square {
+    background-image: url(images/purple_square.png);
+    width: 23.5%;
+    height: 45vh;
+    padding-top: 6vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+/* giftcard image */
+.template4 .purple_square img {
+    width: 75%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .squares {
+        gap: 10px;
+    }
+    .template4 .blue_square {
+        width: 32%;
+        height: 25vh;
+        padding-top: 8vh;
+        font-size: 20px;
+    }
+    .template4 .span1 {
+        font-size: 40px;
+    }
+    .template4 .red_square {
+        width: 32%;
+        height: 25vh;
+        padding-top: 10vh;
+        font-size: 30px;
+    }
+    .template4 .purple_square {
+        width: 32%;
+        height: 25vh;
+        padding-top: 1.5vh;
+        font-size: 25px;
+    }
+    .template4 .purple_square img {
+        width: 75%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 30px;
+    }
+}
+
+/* ----------begin section 5 footer section--------- */
+
+.template5 {
+    background-color: white;
+}
+
+/* div */
+.template5 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+/* gift cards and merch text */
+.template5 .footer .gift-and-merch {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+/* icon formatting */
+.template5 .footer .icons {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: lightgrey;
+}
+
+/* icon colors */
+.template5 .footer i {
+    color: grey;
+}
+
+/* contact us text */
+.template5 .footer .contact-us {
+    font-size: 40px;
+    align-items: center;
+} 
+
+/* mini-bar HOME ABOUT ADA INFO ETC TEXT */
+.template5 .mini-bar {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .template5 .footer {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .template5 .footer .gift-and-merch {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    /* icon formatting */
+    .template5 .footer .icons {
+        font-size: 30px;
+    }
+    /* contact us text */
+    .template5 .footer .contact-us {
+        font-size: 30px;
+    } 
+}
+
+/* -----------------end section 5 --------------- */
+
+/* ==============green new container====== */
+
+/* ==============begin green states box============ */
+
+.template1 {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 30px;
+    color: white;
+    font-family: 'Nunito';
+}
+
+/*  */
+.template1 .container {
+    width: 80%;
+    height: auto;
+    background: rgb(126,138,14);
+    display: flex;
+    gap: 15px;
+    letter-spacing: 3px;
+}
+
+/*  */
+.template1 .container p {
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+/*  */
+.template1 .container button {
+    font-size: 20px;
+    color: red;
+    border-radius: 6px;
+    border: 1px black solid;
+    width: 120px;
+    height: 60px;
+    margin-top: 60px;
+}
+
+
+.template1 .container li {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.template1 .container ul {
+    grid-template-columns: (4, 1fr);
+}
+
+/* ==============new popup trial============= */
+
+.pop-word {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.pop-box {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Show the box when active class is added */
+.pop-word.show .pop-box {
+    display: block;
+}

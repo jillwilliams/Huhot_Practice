@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" Unicode="U+1F334, UTF-8: F0 9F 8C B4" Unicode= "U+1F332, UTF-8: F0 9F 8C B2" Unicode= "U+00A9"  Unicode="U+00A9, UTF-8: C2 A9" Unicode="U+1F440, UTF-8: F0 9F 91 80">
+        <title>Huhot Practice</title>
+        <link HREF="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Shadows+Into+Light|Fresca|Nunito|Iceland" rel="stylesheet">
+        <link rel="stylesheet" HREF="./styles.css">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/9f71dab2a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+        <!-- <meta name="keywords" content="”> -->
+    </head>
+    <body>
+        <div class="nav-container">
+            <nav class="navbar">
+                <img src="images/huhot_logo.png" id="navbar-logo">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>    
+                </div>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="/locations.html" class="nav-links">LOCATIONS</a>
+                    </li>
+                    <li>
+                        <a href="/menu.html" class="nav-links">MENU</a>
+                    </li>
+                    <li>
+                        <a href="/rewards.html" class="nav-links">HUHOT REWARDS</a>
+                    </li>
+                    <li>
+                        <a href="/careers.html" class="nav-links">CAREERS</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-links nav-links-btn">ORDER ONLINE</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- -------------end navbar section----------- -->
+        
+        <!-- ----------begin image slider section----------- -->
+        <div class="image-container">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="images/first_visit.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/sodas.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/join_us.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/dirty_sodas.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/loco_fiesta.png">
+                    </div>
+                    <!-- .... -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    <!-- ----------end slider section---------- -->
+
+    <!-- ----------begin section 3---------- -->
+
+        
+        <div class="now-hiring">
+            <p>Now Hiring: Apply Today!</p>
+            <p><span class="line">|</span> Earn Free HuHot: Join HuHot Rewards!</p>
+        </div>
+        
+
+        <!-- -----------------states---------------------- -->
+
+        <!-- <div class="grid-container">
+            <div class="column">
+                <p #id="location-pricing">Locations and Pricing</p>
+                <button class="location-button">Closest HuHot</button></a>
+            </div>
+            <div class="column">
+                <p>
+                    Colorado
+                </p>
+                <p>
+                    Kansas
+                </p>
+                <p>
+                    Nebraska
+                </p>
+                <p>
+                    Texas
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    Idaho
+                </p>
+                <p>
+                    Minnesota
+                </p>
+                <p>
+                    North Dakota
+                </p>
+                <p>
+                    Utah
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    Indiana
+                </p>
+                <p>
+                    Missouri
+                </p>
+                <p>
+                    Oklahoma
+                </p>
+                <p>
+                    Washington
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    Iowa
+                </p>
+                <p>
+                    Montana
+                </p>
+                <p>
+                    South Dakota
+                </p>
+                <p>
+                    Wisconsin
+                </p>
+            </div>
+        </div>    
+    </section> -->
+    <!-- ==============new grid container========== -->
+<!-- ===========begin green box=========== -->
+        
+        <!-- ===========begin green box=========== -->
+        
+        <section class="grid-container">
+            <div class="column">
+                <p class="location-pricing">
+                    Locations<br><span class="pricing">& Pricing</span> 
+                </p>
+                <button class="location-button">
+                    Closest HuHot
+                </button></a>
+            </div>
+            <ul class="column1">
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Colorado
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Colorado Locations
+                        </p>
+                        <h1> > Colorado Springs</h1>
+                        <h1> > Denver</h1>
+                        <h1> > Fort Collins</h1>
+                        <h1> > Westminster</h1>
+                        <button class="close">CLOSE</button>
+                        </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Kansas
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Kansas Locations
+                        </p>
+                        <h1> > Lawrence</h1>
+                        <h1> > Topeka</h1>
+                        <h1> > Wichita</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Nebraska
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Nebraska Locations
+                        </p>
+                        <h1> > Lincoln</h1>
+                        <h1> > Omaha</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Texas
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Texas Locations
+                        </p>
+                        <h1> > San Antonio</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+            </ul>
+
+            <ul class="column1">
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Idaho
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Idaho Locations
+                        </p>
+                        <h1> > Coeur d'Alene</h1>
+                        <button class="close">CLOSE</button>
+                        </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Minnesota
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Minnesota Locations
+                        </p>
+                        <h1> > Rochester</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">North Dakota
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            North Dakota Locations
+                        </p>
+                        <h1> > Fargo</h1>
+                        <h1> > Bismark</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Utah
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Utah Locations
+                        </p>
+                        <h1> > Layton</h1>
+                        <h1> > Logan</h1>
+                        <h1> > Manhatten</h1>
+                        <h1> > Sandy</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+            </ul>
+
+            <ul class="column1">
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Indiana
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Indiana Locations
+                        </p>
+                        <h1> > Lafayette</h1>
+                        <button class="close">CLOSE</button>
+                        </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Missouri
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Missouri Locations
+                        </p>
+                        <h1> > Columbia</h1>
+                        <h1> > Creve Coeur</h1>
+                        <h1> > Springfield</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Oklahoma
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Oklahoma Locations
+                        </p>
+                        <h1> > Tulsa</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Washington
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Washington Locations
+                        </p>
+                        <h1> > Spokane</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+            </ul>
+
+            <ul class="column1">
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Iowa
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Iowa Locations
+                        </p>
+                        <h1> > Ames</h1>
+                        <h1> > Akeney</h1>
+                        <h1> > Cedar Falls</h1>
+                        <h1> > Cedar Rapids</h1>
+                        <h1> > Coralville</h1>
+                        <h1> > Council Bluffs</h1>
+                        <h1> > Davenport</h1>
+                        <h1> > Des Moines</h1>
+                        <h1> > Dubuque</h1>
+                        <h1> > Sioux City</h1>
+                        <button class="close">CLOSE</button>
+                        </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Montana
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Montana Locations
+                        </p>
+                        <h1> > Billings</h1>
+                        <h1> > Kalispell</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">South Dakota
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            South Dakota Locations
+                        </p>
+                        <h1> > Rapid City</h1>
+                        <h1> > Sioux Falls</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="pop-word" onclick="togglePopup(this)">Wisconsin
+                    <span class="pop-box">
+                        <p class="pop-box-locations">
+                            Wisconsin Locations
+                        </p>
+                        <h1> > Appleton</h1>
+                        <h1> > Green Bay</h1>
+                        <h1> > LaCrosse</h1>
+                        <h1> > Lake Delton</h1>
+                        <h1> > Wausau</h1>
+                        <h1> > West Allis</h1>
+                        <button class="close">CLOSE</button>
+                    </span>
+                    </span>
+                </li>
+            </ul>
+            </div>
+        </section>
+        
+<!-- ===================end green container=============== -->
+
+    <!-- ------------begin section 4 squares---------- -->
+
+    <section class="template4">
+        <div class="squares">
+            <p class="blue_square">HuHot<br>
+                <span class="span1">Rewards</span>
+            </p>
+            <p class="red_square">Menu
+                
+            </p>
+            <p class="purple_square">Buy Gift Cards<br>
+                <img src="images/giftcard.png" class="giftcard"><br>
+                <span class="span3">Check Balance</span>
+            </p>
+        </div>
+    </section> 
+
+    <!-- ----------begin section 5 footer----------   -->
+        <section class="template5">
+            <div class="footer">
+                <p class="gift-and-merch">Gift Cards<br>& Merch</p>
+                
+                <div class="icons">
+                    <a href="https://www.facebook.com/login">
+                    <i class="fa fa-facebook"></i></a>
+                    
+                    <a href="https://www.youtube.com">
+                    <i class="fa-brands fa-youtube"></i></a>
+
+                    <a href="https://www.instagram.com">
+                    <i class="fa fa-instagram"></i></a>
+                </div>
+                <p class="contact-us">Contact Us</p><br>
+            </div>
+            <div class=mini-bar>
+                <p>NEWS | ABOUT | ADA INFO | FRANCHISING | EMPLOYMENT</p>
+            </div>
+        </section>
+
+        <!-- --------------end section 5 footer--------------->
+        
+        
+        <script src="locations.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+
+<!-- ===========new green boxes========== -->
+        <!-- ====================script===================== -->
+        <script src="./app.js">
+            const dialog = document.getElementById('popupBox');
+            const openBtn = document.getElementById('openPopup');
+            const closeBtn = document.getElementById('closePopup');
+
+            // Open the dialog as a modal overlay
+            openBtn.addEventListener('click', () => {
+                dialog.showModal(); 
+            });
+
+            // Close the dialog
+            closeBtn.addEventListener('click', () => {
+                dialog.close();
+            });
+
+        </script>
+    </body>
+</html>
+            
+            
+        
+    
+    

@@ -1,0 +1,467 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Iceland', sans-serif;
+}
+
+.template1 {
+    width: 100%;
+    background-color: red;
+    height: 7vh;
+}
+
+/* locate huhot div */
+.template1 .locate-huhot {
+    width: 100%;
+    padding: 1.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* button find a nearby huhot */
+.template1 .locate-huhot button {
+    width: 45%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: white;
+    color: red;
+    font-size: 25px;
+}
+
+/* hover over button */
+.template1 .locate-huhot button:hover {
+    width: 45%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
+/* location button icon */
+.template1 .locate-huhot button i {
+    color: red;
+    text-decoration: none;
+}
+
+/* location button icon on hover*/
+.template1 .locate-huhot button i:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* location button link */
+.template1 .locate-huhot button a {
+    color: red;
+    text-decoration: none;
+}
+
+.template1 .locate-huhot button a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* home button */
+.template1 .locate-huhot .home-button {
+    width: 15%;
+    padding: 7px 10px;
+    border-radius: 4px;
+    background-color: white;
+    color: red;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+/* home button on hover */
+.template1 .locate-huhot .home-button:hover {
+    background-color: black;
+    width: 15%;
+    color: red;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .template1 .locate-huhot {
+        width: 100%;
+        padding: 1.7vh;
+    }
+    /* button find a nearby huhot */
+    .template1 .locate-huhot button {
+        font-size: 20px;
+    }
+    /* hover over button */
+    .template1 .locate-huhot button:hover {
+        font-size: 20px;
+    }
+}
+
+/* ===========begin navbar section========== */
+
+.template2 {
+    z-index: 1;
+}
+
+/* navbar css */
+.template2 .nav-container .navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 160px;
+    width: 100%;
+    margin: 0 auto;
+    /* position: fixed; */
+    top: 7%;
+    z-index: 9999; /* Higher than the image slider */
+    background-color: black;
+}
+
+/* logo */
+.template2 #navbar-logo {
+    justify-self: start;
+    margin-left: 40px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* logo on hover */
+.template2 #navbar-logo:hover {
+    cursor: pointer;
+}
+
+/* menu bar (text) GETS MENU ONE LINE*/
+.template2 .nav-container .navbar .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    list-style: none;
+    text-align: center;
+    width: 80%;
+    justify-self: end;
+    color: white;
+}
+
+/* link text */
+.template2 .nav-container .navbar .nav-menu .nav-links {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* on hover */
+.template2 .nav-container .navbar .nav-links:hover  {
+    color: red;
+    transition: 0.5s;
+}
+
+/* order online button */
+.template2 .nav-container .navbar .nav-menu .nav-links-btn {
+    background-color: white;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: red;
+}
+
+/* btn on hover */
+.template2 .nav-container .navbar .nav-menu .nav-links-btn:hover {
+    background-color: red;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: 1px solid red;
+    transition: 0.5s;
+}
+
+/* mobile section / hamburger menu */
+.template2 .nav-container .navbar .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: 0.5s;
+    background: white;
+}
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .template2 .nav-container {
+        position: relative;   
+    }
+    .template2 .nav-container .navbar .nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        background: red;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 180px;
+        left: -100%;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .template2 .nav-container .navbar #navbar-logo {
+        margin-left: 20px;
+        width: 200%;
+        height: auto;
+        transform: 0.5s;
+    }
+    .template2 .nav-container .navbar .nav-menu.active {
+        background: black;
+        left: 0;
+        opacity: 1;
+        transition: 0.5s;
+        z-index: 3;    
+    }
+    .template2 .nav-container .navbar .nav-menu .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;    
+    }
+    .template2 .nav-container .navbar .nav-menu .nav-links:hover {
+        background-color: red;
+        color: white;
+        transition: 0.5s;
+    }
+    .template2 .nav-container .navbar {
+        width: 100%;
+    }
+    .template2 .nav-container .navbar .nav-menu .nav-links-btn {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+    }
+    .template2 .nav-container .navbar .nav-menu .nav-links .nav-links-btn:hover {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: red;
+        color: white;
+        transition: 0.5s;
+    }
+    .template2 #mobile-menu {
+        position: absolute;
+        top: 35%;
+        /* moves it down from top 20% */
+        right: 5%;
+        /* moves it to right 5% */
+        transform: translate(5%, 35%);
+        /* makes it more accurate */
+    }
+    .template2 .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+    .template2 .menu-toggle:hover {
+        cursor: pointer;
+    }
+    .template2 #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;    
+    }
+    .template2 #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .template2 #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+/* =============== end navbar section ================ */
+
+/* =========== begin map section ========== */
+
+.template3 {
+    width: 100%;
+    min-height: 50vh;
+    background-color: white;
+}
+
+/* sizing of div  */
+.template3 .google-map {
+    width: 80%;
+    margin: auto;
+    padding-top: 0px;
+    z-index: 1;
+    position: sticky;
+}
+
+/* google map itself */
+.template3 .google-map iframe {
+    width: 100%;
+}
+
+/* ===========end of google map section ========== */
+
+/* ========== begin locations and pricing div ========== */
+
+.template4 {
+    width: 100%;
+    min-height: auto;
+    background-color: white;
+}
+
+/* locations and pricing div */
+.template4 .locations-div {
+    width: 80%;
+    min-height: auto;
+    margin: auto;
+    background: rgba(126,138,14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 5px;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* green div */
+.template4 .locations-div .column {
+    grid-template-columns: 5;
+}
+
+/* p locations and pricing */
+.template4 .locations-div .column .location {
+    font-size: 50px;
+}
+
+/* and pricing text */
+.template4 .locations-div .column .location .pricing {
+    font-size: 40px;
+}
+
+/* closest huhot button */
+.template4 .locations-div .column .location-button {
+    color: black;
+    padding: 5px 10px;
+    margin-top: 30px;
+    font-size: 40px;
+    border-radius: 4px;
+}
+
+/* closest huhot button on hover */
+.template4 .locations-div .column .location-button:hover {
+    color: white;
+    padding: 5px 10px;
+    margin-top: 30px;
+    font-size: 40px;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+}
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .template4 .locations-div {
+        width: 80%;
+        height: auto;
+        font-size: 14px;
+        letter-spacing: 1px;
+        gap: 10px;
+    }
+    .template4 .locations-div .column .location {
+        font-size: 20px;
+    }
+    .template4 .locations-div .column .location .pricing {
+        font-size: 15px;
+    }
+    .template4 .locations-div .column .location-button {
+        color: black;
+        padding: 2px 6px;
+        margin-top: 20px;
+        font-size: 20px;
+        border-radius: 4px;
+    }
+}
+
+/* ===============end locations and pricing section ========= */
+
+/* =========begin footer section ========== */
+
+.template5 {
+    background-color: white;
+}
+
+/* div */
+.template5 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+/* gift cards and merch text */
+.template5 .footer .gift-and-merch {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+/* icon formatting */
+.template5 .footer .icons {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: lightgrey;
+}
+
+/* icon colors */
+.template5 .footer i {
+    color: grey;
+}
+
+/* contact us text */
+.template5 .footer .contact-us {
+    font-size: 40px;
+    align-items: center;
+    /* padding-top: 60px; */
+} 
+
+/* mini-bar HOME ABOUT ADA INFO ETC TEXT */
+.template5 .mini-bar {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+/* media query */
+@media screen and (max-width: 760px) {
+    .template5 .footer {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .template5 .footer .gift-and-merch {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    /* icon formatting */
+    .template5 .footer .icons {
+        font-size: 30px;
+    }
+    /* contact us text */
+    .template5 .footer .contact-us {
+        font-size: 30px;
+    } 
+}
+
+/* ==========end footer section ========== */
